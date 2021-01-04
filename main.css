@@ -1,0 +1,115 @@
+:root {
+    --title-height: 100px;
+    --current-selection-color: lightgreen;
+}
+
+body, html {
+    background: #212121;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    height: var(--title-height);
+    line-height: var(--title-height);
+    margin: 0;
+    margin-left: 20px;
+}
+
+#grid {
+    width: 100%;
+    height: calc(100% - var(--title-height));
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#grid > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333333;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+
+    border: #141414 1px solid;
+}
+
+#grid > p:hover {
+    background-color: #3d3d3d;
+}
+
+.selected {
+    background-color: var(--current-selection-color) !important;
+    color: #333333;
+}
+
+.verified {
+    color: #333333;
+}
+
+/* Game Selection */
+
+.game-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333333;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+    margin: auto;
+
+    width: 20vw;
+    height: 20vw;
+}
+
+.game-btn:hover {
+    background: #3d3d3d;
+}
+
+#game-btns {
+    width: 100%;
+    height: calc(100% - var(--title-height));
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Vowels */
+
+input {
+    width: 80%;
+    height: 50px;
+    margin: 0;
+    display: inline;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0;
+    margin: 20px;
+}
+
+#vowel-submit {
+    display: inline-block;
+    width: calc(20% - 90px);
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #333333;
+}
+
+#input-panel {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#clue {
+    margin-left: 20px;
+}
